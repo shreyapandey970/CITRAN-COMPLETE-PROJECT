@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="halflogo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="" />
+  
+    
+  
+    <title>CITRAN</title>
+    <style>
+      .lang{
+        color:white;
+      }
+
+      #google_translate_element{
+        margin-left:-170px;
+        
+      }
+      
+      .goog-te-combo{
+        color: white;
+        background-color: #BA8437;
+        border: none;
+        border-radius:5px;
+        padding: 9px;
+        font-family: cursive;
+        position:absolute;
+        right: 20px;
+        top:10px;
+        width:140px;
+      }
+      
+    </style>
+  </head>
+  <body onload="myFunction()" >
+    <div id="loading">
+      <div id="preloader"></div>
+    </div>
+    <div id="google_translate_element" class="lang"></div>
+    <script >
+        function googleTranslateElementInit(){
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element')
+            
+        }
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <div id="root"></div>
+    <script>
+      var preloader = document.getElementById('loading');
+      function myFunction()
+      {
+        preloader.style.display = 'none';
+      }
+    </script>
+
+  </body>
+</html>

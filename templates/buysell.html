@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Moving Average Strategy</title>
+    <style>
+        #cpptitle{
+                color:white;
+                text-align: center;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                background-color: #BA8437;
+                height:70px;
+                margin-top: -10px;
+
+            }
+            #cpptitle1{
+                color:white;
+                text-align: center;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                background-color: #BA8437;
+                height:70px;
+                margin-top: -40px;
+                z-index:99999;
+            }
+
+            form {
+       
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+
+    input[type="number"] {
+        width: 90%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+
+    button[type="submit"] {
+        padding: 10px 20px;
+        background-color: #BA8437;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    button[type="submit"]:hover {
+        background-color: black;
+    }
+
+    a{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 9px 20px; /* Added padding */
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    background-color: #BA8437;
+    border: 1px solid #BA8437; /* Added border */
+    border-radius: 4px; /* Added border-radius */
+    transition: background-color 0.3s ease; 
+    }
+
+    a:hover {
+        background-color: black;
+    }
+
+   
+
+    </style>
+</head>
+<body bgcolor="black">
+   
+    <div id="cpptitle"></div>
+    <h1 id="cpptitle1">CITRAN CRYPTO BUY/SELL PREDICTION</h1>
+    
+    <br/><br/><br/><br/><br/><br/><br/>
+    <form action="{{ url_for('buysell') }}" method="post">
+        <br/>
+        <label for="num_inputs">Number of Data Points:</label>
+        <input type="number" id="num_inputs" name="num_inputs" required>
+        <br><br>
+        <button type="submit">Submit</button>
+        <a href="http://localhost:3000/homepage">Back</a>
+    </form>
+    
+    
+</body>
+</html>
